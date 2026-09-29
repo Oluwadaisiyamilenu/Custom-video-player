@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+}
+
+header {
+    background: #1d4ed8;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 17px;
+    opacity: 0.9;
+}
+
+.students-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.students-section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.student-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.student-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+}
+
+.student-card h3 {
+    color: #1d4ed8;
+    margin-bottom: 15px;
+}
+
+.student-card p {
+    margin: 8px 0;
+    color: #475569;
+}
+
+.fee-paid {
+    color: green !important;
+    font-weight: bold;
+}
+
+.fee-pending {
+    color: red !important;
+    font-weight: bold;
+}

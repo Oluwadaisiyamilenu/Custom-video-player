@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SamuelDev | Custom Video Player</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- Header -->
+        <header class="header">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">▶</span>
+                <span>Samuel<span class="highlight">Player</span></span>
+            </a>
+
+            <p class="header-text">Your personal media experience</p>
+
+        </header>
+
+
+        <!-- Main Content -->
+        <section class="player-section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">NOW PLAYING</p>
+                    <h1>Custom Video Player</h1>
+                    <p class="description">
+                        Enjoy your favorite videos with custom controls.
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Video Player -->
+            <div class="video-player" id="player">
+
+                <!-- Video -->
+                <video id="video" preload="metadata">
+    <source
+        src="https://cdn.truefilesize.com/mp4/sample-50mb.mp4?utm_source=chatgpt.com"
+        type="video/mp4"
+    >
+    Your browser does not support HTML video.
+</video>
+
+                <!-- Loading Spinner -->
+                <div class="loader" id="loader"></div>
+
+
+                <!-- Center Play Button -->
+                <button class="center-play" id="centerPlay" aria-label="Play video">
+                    ▶
+                </button>
+
+
+                <!-- Video Overlay -->
+                <div class="video-overlay">
+
+                    <!-- Video Title -->
+                    <div class="video-info">
+                        <span class="live-dot"></span>
+                        <span>SamuelPlayer</span>
+                    </div>
+
+
+                    <!-- Controls -->
+                    <div class="controls">
+
+                        <!-- Progress Bar -->
+                        <div class="progress-container">
+
+                            <input
+                                type="range"
+                                id="seekBar"
+                                min="0"
+                                max="100"
+                                value="0"
+                                aria-label="Video progress"
+                            >
+
+                        </div>
+
+
+                        <!-- Control Buttons -->
+                        <div class="control-bar">
+
+                            <div class="left-controls">
+
+                                <!-- Play/Pause -->
+                                <button id="playBtn" class="control-btn" aria-label="Play">
+                                    ▶
+                                </button>
+
+                                <!-- Backward -->
+                                <button id="backwardBtn" class="control-btn" aria-label="Back 10 seconds">
+                                    ↶
+                                </button>
+
+                                <!-- Forward -->
+                                <button id="forwardBtn" class="control-btn" aria-label="Forward 10 seconds">
+                                    ↷
+                                </button>
+
+                                <!-- Time -->
+                                <div class="time-display">
+                                    <span id="currentTime">00:00</span>
+                                    <span class="time-divider">/</span>
+                                    <span id="duration">00:00</span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="right-controls">
+
+                                <!-- Volume -->
+                                <div class="volume-container">
+
+                                    <button id="muteBtn" class="control-btn" aria-label="Mute">
+                                        🔊
+                                    </button>
+
+                                    <input
+                                        type="range"
+                                        id="volume"
+                                        min="0"
+                                        max="1"
+                                        step="0.05"
+                                        value="1"
+                                        aria-label="Volume"
+                                    >
+
+                                </div>
+
+
+                                <!-- Playback Speed -->
+                                <select id="speed" aria-label="Playback speed">
+
+                                    <option value="0.5">0.5x</option>
+                                    <option value="0.75">0.75x</option>
+                                    <option value="1" selected>1x</option>
+                                    <option value="1.25">1.25x</option>
+                                    <option value="1.5">1.5x</option>
+                                    <option value="2">2x</option>
+
+                                </select>
+
+
+                                <!-- Fullscreen -->
+                                <button id="fullscreenBtn" class="control-btn" aria-label="Fullscreen">
+                                    ⛶
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Video Details -->
+            <div class="video-details">
+
+                <div>
+                    <h2>My Video</h2>
+                    <p>Custom video player built with HTML, CSS, and JavaScript.</p>
+                </div>
+
+                <span class="quality-badge">HD PLAYER</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built with ❤️ by <strong>SamuelDev</strong></p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
